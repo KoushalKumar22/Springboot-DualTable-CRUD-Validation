@@ -14,7 +14,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
-@Repository
+@RestController
 @RequestMapping("/teachers")
 public class TeacherController {
 
