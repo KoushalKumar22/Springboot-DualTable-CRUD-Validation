@@ -23,5 +23,36 @@ public class Students {
     @Range(min = 6,max = 12,message = "Class not allowed")
     int std;
 
+    public Students() {
+    }
 
+    public Students(int rollno, String name, int std) {
+        this.rollno = rollno;
+        this.name = name;
+        this.std = std;
+    }
+
+    public int getRollno() {
+        return rollno;
+    }
+
+    public void setRollno(int rollno) {
+        this.rollno = rollno;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getStd() {
+        return std;
+    }
+
+    public void setStd(int std) {
+        this.std = std;
+    }
 }
