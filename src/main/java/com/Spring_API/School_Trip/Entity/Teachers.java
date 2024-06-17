@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Past;
+import jakarta.validation.constraints.Pattern;
 import org.aspectj.bridge.IMessage;
 
 @Entity
@@ -14,6 +16,7 @@ public class Teachers {
     @Id
     @Column(name = "ID",unique = true)
     @NotEmpty(message = "Enter An Valid Id")
+    @Pattern(regexp = "^[a-zA-Z0-9]{12}$",message = "Should not contain special characters")
     String id;
 
     @Column(name = "Name",length = 50)
